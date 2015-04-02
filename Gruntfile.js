@@ -27,6 +27,14 @@ grunt.initConfig({
 		}
 	},
 
+	sprite: {
+		all:{
+			src: 'dev/_assets/_sprite/*.png',
+			destCSS: 'dev/_assets/_sass/_sprite.scss',
+			destImg: 'dev/_assets/img/sprite.png'
+		}
+	},
+
 	jshint: {
 		// 対象となるファイルを定義します
 		files: ['dev/_assets/js/src/*.js'],
@@ -132,6 +140,7 @@ grunt.initConfig({
 	}
 });
 
+grunt.loadNpmTasks('grunt-spritesmith');
 
 grunt.loadNpmTasks('grunt-contrib-watch');
 grunt.loadNpmTasks('grunt-contrib-connect');
@@ -153,5 +162,6 @@ grunt.loadNpmTasks('grunt-contrib-clean');
 // タスクの登録
 grunt.registerTask('default', ['connect', 'watch']);
 grunt.registerTask('build', ['copy', 'clean', 'uglify', 'cssmin']);
+grunt.registerTask('sprite', ['sprite']);
 
 };
