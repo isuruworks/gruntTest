@@ -4,8 +4,9 @@
 	<meta charset="UTF-8">
 	<title>test</title>
 	<link rel="stylesheet" type="text/css" href="_assets/css/style.css">
-	<!-- <script src="_assets/js/lib/jquery-1.11.2.min.js"></script> -->
-	<script src="_assets/js/script.min.js"></script>
+	<script src="_assets/js/lib/jquery-1.11.2.min.js"></script>
+	<script src="_assets/js/lib/util.js"></script>
+	<script src="_assets/js/src/main.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -37,7 +38,7 @@
 			</section>
 			<section id="section05">
 				<h2>section05</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur ad autem nemo illo quidem praesentium culpa, iste nihil vel a veritatis? Quidem voluptatibus, alias expedita vel assumenda. Temporibus, nisi, facilis.</p>
+
 			</section>
 		</article>
 		<footer>

@@ -1,3 +1,5 @@
+console.log('aaa');
+
 var obj = {};
 
 window.onload = function(){

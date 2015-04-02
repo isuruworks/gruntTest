@@ -8,11 +8,13 @@ JS: jshint
 納品時
 フォルダコピーしていらないファイルを削除して
 css,jsをminify化
-copy => clean => concat => uglify => cssmin
+copy => clean => uglify => cssmin
 **************************************************/
 
 //Gruntの設定
 grunt.initConfig({
+
+	pkg: grunt.file.readJSON('package.json'),
 
 	// ローカルサーバー設定
 	connect: {
@@ -46,15 +48,6 @@ grunt.initConfig({
 			dest: 'dev/_assets/js/src/lib.min.js'
 		}
 	},
-	uglify: {
-		options: {
-			banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
-		},
-		build: {
-			src: 'dev/_assets/js/src/main.js',
-			dest: 'dev/_assets/js/src/main.min.js'
-		}
-	},
 	sass: {
 		target: {
 			src: 'dev/_assets/_sass/*.scss',
@@ -73,15 +66,51 @@ grunt.initConfig({
 			browsers: ['last 2 version', 'ie 8', 'ie 9']
 		}
 	},
+	// 公開用にcssを圧縮
 	cssmin: {
 		target: {
 			expand: true,
-			src: ['dev/_assets/**/*.css', '!*.min.css'],
-			// 出力先はそのまま
-			dest: './',
-			// ファイルの拡張子をファイル名.min.cssにする
-			ext: '.min.css'
+			cwd: 'dev/_assets/css',
+			src: '*.css',
+			dest: 'dist/_assets/css',
+			ext: '.css'
 		}
+	},
+	// 公開用にjsを圧縮
+	uglify: {
+		task1: {
+			options: {
+				banner: '/* \n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>  \n main.js\n*/\n',
+				compress: {
+					drop_console: true
+				}
+			},
+			src: 'dev/_assets/js/src/main.js',
+			dest: 'dist/_assets/js/src/main.js'
+		},
+		task2: {
+			options: {
+				banner: '/* \n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>  \n util.js\n*/\n',
+				compress: {
+					drop_console: true
+				}
+			},
+			src: 'dev/_assets/js/lib/util.js',
+			dest: 'dist/_assets/js/lib/util.js'
+		},
+	},
+	// 公開用にdistフォルダにコピー
+	copy: {
+		dist: {
+			expand: true,
+			cwd: 'dev/',
+			dest: 'dist',
+			src: '**'
+		}
+	},
+	// 公開フォルダから不要なデータを削除
+	clean: {
+		build: ['dist/_assets/_sass']
 	},
 
 	// 監視
@@ -91,7 +120,7 @@ grunt.initConfig({
 		},
 		js: {
 			files: ['dev/_assets/js/src/*.js'],
-			tasks: ['jshint','concat','uglify']
+			tasks: ['jshint']
 		},
 		sass: {
 			files: ['dev/_assets/_sass/*.scss'],
@@ -122,6 +151,6 @@ grunt.loadNpmTasks('grunt-contrib-clean');
 
 // タスクの登録
 grunt.registerTask('default', ['connect', 'watch']);
-grunt.registerTask('build', ['copy', 'clean', 'concat', 'uglify', 'cssmin']);
+grunt.registerTask('build', ['copy', 'clean', 'uglify', 'cssmin']);
 
 };
