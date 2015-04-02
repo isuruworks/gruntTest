@@ -57,6 +57,14 @@ grunt.initConfig({
 			sourcemap: 'none'
 		}
 	},
+	csso: {
+		dist: {
+			files: {
+				src: 'dev/_assets/css/style.css',
+				dest: 'dev/_assets/css/style.css'
+			}
+		}
+	},
 	autoprefixer: {
 		target: {
 			src: 'dev/_assets/css/style.css',
@@ -138,6 +146,7 @@ grunt.loadNpmTasks('grunt-contrib-connect');
 
 grunt.loadNpmTasks('grunt-contrib-sass');
 grunt.loadNpmTasks('grunt-autoprefixer');
+grunt.loadNpmTasks('grunt-csso');
 grunt.loadNpmTasks('grunt-contrib-cssmin');
 
 grunt.loadNpmTasks('grunt-contrib-jshint');

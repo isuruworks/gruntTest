@@ -1,0 +1,256 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-spritesmith',
+1 verbose cli   '--save-dev' ]
+2 info using npm@2.7.3
+3 info using node@v0.12.1
+4 silly cache add args [ 'grunt-spritesmith', null ]
+5 verbose cache add spec grunt-spritesmith
+6 silly cache add parsed spec { raw: 'grunt-spritesmith',
+6 silly cache add   scope: null,
+6 silly cache add   name: 'grunt-spritesmith',
+6 silly cache add   rawSpec: '',
+6 silly cache add   spec: '*',
+6 silly cache add   type: 'range' }
+7 verbose addNamed grunt-spritesmith@*
+8 silly addNamed semver.valid null
+9 silly addNamed semver.validRange *
+10 silly addNameRange { name: 'grunt-spritesmith', range: '*', hasData: false }
+11 silly mapToRegistry name grunt-spritesmith
+12 silly mapToRegistry using default registry
+13 silly mapToRegistry registry https://registry.npmjs.org/
+14 silly mapToRegistry uri https://registry.npmjs.org/grunt-spritesmith
+15 verbose addNameRange registry:https://registry.npmjs.org/grunt-spritesmith not in flight; fetching
+16 verbose request uri https://registry.npmjs.org/grunt-spritesmith
+17 verbose request no auth needed
+18 info attempt registry request try #1 at 23:05:15
+19 verbose request id 941dc552fe125feb
+20 http request GET https://registry.npmjs.org/grunt-spritesmith
+21 http 200 https://registry.npmjs.org/grunt-spritesmith
+22 silly get cb [ 200,
+22 silly get   { date: 'Thu, 02 Apr 2015 14:05:16 GMT',
+22 silly get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+22 silly get     etag: '"82Q6HGY11WCQ0AI03TO5DLTPU"',
+22 silly get     'content-type': 'application/json',
+22 silly get     'cache-control': 'max-age=60',
+22 silly get     'content-length': '188175',
+22 silly get     'accept-ranges': 'bytes',
+22 silly get     via: '1.1 varnish',
+22 silly get     age: '0',
+22 silly get     'x-served-by': 'cache-nrt6121-NRT',
+22 silly get     'x-cache': 'HIT',
+22 silly get     'x-cache-hits': '1',
+22 silly get     'x-timer': 'S1427983515.562556,VS0,VE719',
+22 silly get     vary: 'Accept',
+22 silly get     'keep-alive': 'timeout=10, max=50',
+22 silly get     connection: 'Keep-Alive' } ]
+23 verbose get saving grunt-spritesmith to /Users/isuruworks/.npm/registry.npmjs.org/grunt-spritesmith/.cache.json
+24 silly addNameRange number 2 { name: 'grunt-spritesmith', range: '*', hasData: true }
+25 silly addNameRange versions [ 'grunt-spritesmith',
+25 silly addNameRange   [ '0.2.3',
+25 silly addNameRange     '0.3.0',
+25 silly addNameRange     '0.3.1',
+25 silly addNameRange     '0.4.0',
+25 silly addNameRange     '0.5.0',
+25 silly addNameRange     '0.5.1',
+25 silly addNameRange     '0.5.2',
+25 silly addNameRange     '0.5.3',
+25 silly addNameRange     '0.5.4',
+25 silly addNameRange     '0.5.5',
+25 silly addNameRange     '0.5.6',
+25 silly addNameRange     '0.6.1',
+25 silly addNameRange     '0.7.0',
+25 silly addNameRange     '0.8.0',
+25 silly addNameRange     '0.8.1',
+25 silly addNameRange     '0.9.0',
+25 silly addNameRange     '1.0.0',
+25 silly addNameRange     '1.1.0',
+25 silly addNameRange     '1.2.0',
+25 silly addNameRange     '1.3.0',
+25 silly addNameRange     '1.3.1',
+25 silly addNameRange     '1.4.0',
+25 silly addNameRange     '1.5.0',
+25 silly addNameRange     '1.5.1',
+25 silly addNameRange     '1.5.2',
+25 silly addNameRange     '1.6.0',
+25 silly addNameRange     '1.6.1',
+25 silly addNameRange     '1.6.2',
+25 silly addNameRange     '1.7.0',
+25 silly addNameRange     '1.7.1',
+25 silly addNameRange     '1.8.0',
+25 silly addNameRange     '1.9.0',
+25 silly addNameRange     '1.10.0',
+25 silly addNameRange     '1.10.1',
+25 silly addNameRange     '1.11.0',
+25 silly addNameRange     '1.11.1',
+25 silly addNameRange     '1.11.2',
+25 silly addNameRange     '1.11.3',
+25 silly addNameRange     '1.11.4',
+25 silly addNameRange     '1.12.0',
+25 silly addNameRange     '1.13.0',
+25 silly addNameRange     '1.14.0',
+25 silly addNameRange     '1.15.0',
+25 silly addNameRange     '1.16.0',
+25 silly addNameRange     '1.17.0',
+25 silly addNameRange     '1.18.0',
+25 silly addNameRange     '1.19.0',
+25 silly addNameRange     '1.20.0',
+25 silly addNameRange     '1.21.0',
+25 silly addNameRange     '1.21.1',
+25 silly addNameRange     '1.21.2',
+25 silly addNameRange     '1.22.0',
+25 silly addNameRange     '1.23.0',
+25 silly addNameRange     '1.24.0',
+25 silly addNameRange     '1.25.0',
+25 silly addNameRange     '1.26.0',
+25 silly addNameRange     '1.26.1',
+25 silly addNameRange     '2.0.0',
+25 silly addNameRange     '2.1.0',
+25 silly addNameRange     '2.1.1',
+25 silly addNameRange     '2.1.2',
+25 silly addNameRange     '2.1.3',
+25 silly addNameRange     '2.20.0',
+25 silly addNameRange     '2.3.0',
+25 silly addNameRange     '2.3.1',
+25 silly addNameRange     '2.3.2',
+25 silly addNameRange     '2.3.3',
+25 silly addNameRange     '2.4.0',
+25 silly addNameRange     '2.4.1',
+25 silly addNameRange     '2.4.2',
+25 silly addNameRange     '2.4.3',
+25 silly addNameRange     '3.0.0',
+25 silly addNameRange     '3.0.1',
+25 silly addNameRange     '3.0.2',
+25 silly addNameRange     '3.1.0',
+25 silly addNameRange     '3.1.1',
+25 silly addNameRange     '3.2.0',
+25 silly addNameRange     '3.3.0',
+25 silly addNameRange     '3.4.0',
+25 silly addNameRange     '3.5.0',
+25 silly addNameRange     '3.6.0',
+25 silly addNameRange     '3.6.1',
+25 silly addNameRange     '3.6.2',
+25 silly addNameRange     '3.7.0',
+25 silly addNameRange     '3.8.0',
+25 silly addNameRange     '3.8.1',
+25 silly addNameRange     '3.9.0',
+25 silly addNameRange     '4.0.0',
+25 silly addNameRange     '4.1.0',
+25 silly addNameRange     '4.2.0',
+25 silly addNameRange     '4.3.0',
+25 silly addNameRange     '4.3.1',
+25 silly addNameRange     '4.3.2',
+25 silly addNameRange     '4.4.0',
+25 silly addNameRange     '4.4.1',
+25 silly addNameRange     '4.5.0',
+25 silly addNameRange     '4.5.1' ] ]
+26 verbose addNamed grunt-spritesmith@4.5.1
+27 silly addNamed semver.valid 4.5.1
+28 silly addNamed semver.validRange 4.5.1
+29 silly mapToRegistry name grunt-spritesmith
+30 silly mapToRegistry using default registry
+31 silly mapToRegistry registry https://registry.npmjs.org/
+32 silly mapToRegistry uri https://registry.npmjs.org/grunt-spritesmith
+33 verbose addRemoteTarball https://registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz not in flight; adding
+34 verbose addRemoteTarball [ 'https://registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz',
+34 verbose addRemoteTarball   '20b56a0c2c746bbb436af48bc4a2bbb6efa08946' ]
+35 info retry fetch attempt 1 at 23:05:16
+36 info attempt registry request try #1 at 23:05:16
+37 http fetch GET https://registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz
+38 http fetch 200 https://registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz
+39 silly fetchAndShaCheck shasum 20b56a0c2c746bbb436af48bc4a2bbb6efa08946
+40 verbose addTmpTarball /var/folders/sb/mcj2cx756fgcf1bvd_7dhzc00000gn/T/npm-3090-8f137315/registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz not in flight; adding
+41 verbose addTmpTarball already have metadata; skipping unpack for grunt-spritesmith@4.5.1
+42 silly cache afterAdd grunt-spritesmith@4.5.1
+43 verbose afterAdd /Users/isuruworks/.npm/grunt-spritesmith/4.5.1/package/package.json not in flight; writing
+44 verbose afterAdd /Users/isuruworks/.npm/grunt-spritesmith/4.5.1/package/package.json written
+45 silly install resolved [ { name: 'grunt-spritesmith',
+45 silly install resolved     description: 'Grunt task for converting a set of images into a spritesheet and corresponding CSS variables.',
+45 silly install resolved     version: '4.5.1',
+45 silly install resolved     homepage: 'https://github.com/Ensighten/grunt-spritesmith',
+45 silly install resolved     author:
+45 silly install resolved      { name: 'Todd Wolfson',
+45 silly install resolved        email: 'todd@twolfson.com',
+45 silly install resolved        url: 'http://twolfson.com/' },
+45 silly install resolved     contributors: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+45 silly install resolved     repository:
+45 silly install resolved      { type: 'git',
+45 silly install resolved        url: 'git://github.com/Ensighten/grunt-spritesmith.git' },
+45 silly install resolved     bugs: { url: 'https://github.com/Ensighten/grunt-spritesmith/issues' },
+45 silly install resolved     licenses: [ [Object] ],
+45 silly install resolved     main: 'tasks/grunt-spritesmith.js',
+45 silly install resolved     engines: { node: '>= 0.8.0' },
+45 silly install resolved     scripts:
+45 silly install resolved      { precheck: 'twolfson-style precheck docs/ src/ src-test/ tasks/',
+45 silly install resolved        lint: 'twolfson-style lint docs/ src/ src-test/ tasks/',
+45 silly install resolved        pretest: 'twolfson-style install',
+45 silly install resolved        test: 'npm run precheck && mocha src-test/ --reporter dot && npm run lint' },
+45 silly install resolved     dependencies:
+45 silly install resolved      { async: '~0.9.0',
+45 silly install resolved        'spritesheet-templates': '~9.4.0',
+45 silly install resolved        spritesmith: '~1.3.0',
+45 silly install resolved        underscore: '~1.4.2',
+45 silly install resolved        url2: '1.0.0' },
+45 silly install resolved     devDependencies:
+45 silly install resolved      { 'get-pixels': '~3.1.0',
+45 silly install resolved        gmsmith: '~0.4.5',
+45 silly install resolved        grunt: '~0.4.2',
+45 silly install resolved        'grunt-cli': '~0.1.13',
+45 silly install resolved        'grunt-newer': '~0.8.0',
+45 silly install resolved        'js-yaml': '~3.2.3',
+45 silly install resolved        jscs: '~1.8.1',
+45 silly install resolved        jshint: '~2.5.10',
+45 silly install resolved        mocha: '~1.21.5',
+45 silly install resolved        rimraf: '~2.2.8',
+45 silly install resolved        'shell-quote': '~1.4.2',
+45 silly install resolved        'twolfson-style': '~1.6.0' },
+45 silly install resolved     keywords:
+45 silly install resolved      [ 'grunt',
+45 silly install resolved        'gruntplugin',
+45 silly install resolved        'sprite',
+45 silly install resolved        'image',
+45 silly install resolved        'spritesheet',
+45 silly install resolved        'css',
+45 silly install resolved        'spritesmith',
+45 silly install resolved        'cross-platform' ],
+45 silly install resolved     gitHead: '85923a18a0dbb76944a792d791ed45b4d9bc9fee',
+45 silly install resolved     _id: 'grunt-spritesmith@4.5.1',
+45 silly install resolved     _shasum: '20b56a0c2c746bbb436af48bc4a2bbb6efa08946',
+45 silly install resolved     _from: 'grunt-spritesmith@*',
+45 silly install resolved     _npmVersion: '2.3.0',
+45 silly install resolved     _nodeVersion: '0.10.38',
+45 silly install resolved     _npmUser: { name: 'twolfson', email: 'todd@twolfson.com' },
+45 silly install resolved     maintainers: [ [Object] ],
+45 silly install resolved     dist:
+45 silly install resolved      { shasum: '20b56a0c2c746bbb436af48bc4a2bbb6efa08946',
+45 silly install resolved        tarball: 'http://registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz' },
+45 silly install resolved     directories: {},
+45 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-spritesmith/-/grunt-spritesmith-4.5.1.tgz' } ]
+46 info install grunt-spritesmith@4.5.1 into /Users/isuruworks/Desktop/project/gruntTest
+47 info installOne grunt-spritesmith@4.5.1
+48 verbose installOne of grunt-spritesmith to /Users/isuruworks/Desktop/project/gruntTest not in flight; installing
+49 warn locking Error: EACCES, open '/Users/isuruworks/.npm/_locks/grunt-spritesmith-0fd36aa3c1b1dd0d.lock'
+49 warn locking     at Error (native)
+49 warn locking  /Users/isuruworks/.npm/_locks/grunt-spritesmith-0fd36aa3c1b1dd0d.lock failed { [Error: EACCES, open '/Users/isuruworks/.npm/_locks/grunt-spritesmith-0fd36aa3c1b1dd0d.lock']
+49 warn locking   errno: -13,
+49 warn locking   code: 'EACCES',
+49 warn locking   path: '/Users/isuruworks/.npm/_locks/grunt-spritesmith-0fd36aa3c1b1dd0d.lock' }
+50 verbose stack Error: Attempt to unlock /Users/isuruworks/Desktop/project/gruntTest/node_modules/grunt-spritesmith, which hasn't been locked
+50 verbose stack     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:66:11)
+50 verbose stack     at cb (/usr/local/lib/node_modules/npm/lib/install.js:1004:5)
+50 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:1008:20
+50 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:40:9
+50 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+50 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+50 verbose stack     at FSReqWrap.oncomplete (fs.js:99:15)
+51 verbose cwd /Users/isuruworks/Desktop/project/gruntTest
+52 error Darwin 12.5.0
+53 error argv "node" "/usr/local/bin/npm" "install" "grunt-spritesmith" "--save-dev"
+54 error node v0.12.1
+55 error npm  v2.7.3
+56 error Attempt to unlock /Users/isuruworks/Desktop/project/gruntTest/node_modules/grunt-spritesmith, which hasn't been locked
+57 error If you need help, you may report this error at:
+57 error     <https://github.com/npm/npm/issues>
+58 verbose exit [ 1, true ]
