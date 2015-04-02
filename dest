@@ -1,2 +1,0 @@
-/*! gruntTest 2015-04-02 */ 
-var util={};window.onload=function(){util.init()},util={init:function(){console.log("util")}};
