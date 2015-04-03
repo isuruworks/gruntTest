@@ -33,10 +33,10 @@ util = {
 		}
 		else {
 			userAgent = "Unknown";
-		}
+		};
 		return userAgent;
 	},
-	pcsp : function(){
+	pcsp : function(){ // pc:true / sp:false
 		if(util.ua() == 'iPad' || util.ua() == 'iPhone' || util.ua() == 'Android'){
 			var bln = false;
 		}else{
@@ -47,13 +47,13 @@ util = {
 	sw : function () {
 		if ( window.innerWidth ) {return window.innerWidth;}
 		else if ( document.documentElement && document.documentElement.clientWidth != 0 ) {return document.documentElement.clientWidth;}
-		else if ( document.body ) {return document.body.clientWidth;}
+		else if ( document.body ) {return document.body.clientWidth;};
 		return 0;
 	},
 	sh : function () {
 		if ( window.innerHeight ) {return window.innerHeight;}
 		else if ( document.documentElement && document.documentElement.clientHeight != 0 ) {return document.documentElement.clientHeight;}
-		else if ( document.body ) {return document.body.clientHeight;}
+		else if ( document.body ) {return document.body.clientHeight;};
 	},
 	scrollX : function () {
 		return document.documentElement.scrollLeft || document.body.scrollLeft;
@@ -65,7 +65,7 @@ util = {
 		$('a[href^=#]').click(function() {
 			var speed = 500;
 			var href= $(this).attr("href");
-			var target = $(href == "#" || href == "" ? 'html' : href);
+			var target = $(href == "#" || href == "" ? "html" : href);
 			var position = target.offset().top;
 			$($.browser.safari ? 'body' : 'html').animate({scrollTop:position}, speed, 'swing');
 			return false;
@@ -76,7 +76,7 @@ util = {
 		var maxHeight = 0;
 		for(var i = 0,len = elem.length;i < len;i++){
 			if(maxHeight < elem.height()) maxHeight = elem.height();
-		}
+		};
 		$('.box').css({height: maxHeight});
 	},
 	footerFixed : function (elem) {
@@ -87,21 +87,21 @@ util = {
 		if(winH > bodyH) var intH = winH;
 		else var intH = bodyH;
 		console.log(intH);
-		elem.css({top: intH - elemH,left: 0})
+		elem.css({top: intH - elemH,left: 0});
 	},
 	addEvent : function (elem,lis,fn) {
 		try{
 			elem.addEventListener(lis,fn,false);
 		}catch(e){
 			elem.attachEvent("on"+lis,fn);
-		}
+		};
 	},
 	removeEvent : function (elem,lis,fn) {
 		try{
 			elem.removeEventListener(lis,fn,false);
 		}catch(e){
 			elem.detachEvent("on"+lis,fn);
-		}
+		};
 	},
 	getQuery : function(){
 		var that = this;
@@ -114,8 +114,8 @@ util = {
 				var paramName = decodeURIComponent( element[ 0 ] );
 				var paramValue = decodeURIComponent( element[ 1 ] );
 				result[ paramName ] = paramValue;
-			}
-		}
+			};
+		};
 		return result;
 	},
 	// util.ratioCulc(外枠W,外枠H,内枠W,内枠H,小さい方[true]か大きい方[false])
@@ -127,11 +127,11 @@ util = {
 			var ratio = ratioW < ratioH? ratioW : ratioH;
 		}else{
 			var ratio = ratioW > ratioH? ratioW : ratioH;
-		}
+		};
 		var ary = [];
 		ary[0] = num3 * ratio;
 		ary[1] = num4 * ratio;
 		ary[2] = ratio;
 		return ary;
 	}
-}
+};

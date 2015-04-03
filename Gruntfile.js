@@ -51,9 +51,9 @@ grunt.initConfig({
 	concat: {
 		files: {
 			// 元ファイルの指定。
-			src : 'dev/_assets/js/lib/*.js',
+			src : ['dev/_assets/js/lib/*.js','!dev/_assets/js/lib/scripts.min.js'],
 			// 出力ファイルの名前・パス指定
-			dest: 'dev/_assets/js/src/lib.min.js'
+			dest: 'dev/_assets/js/lib/scripts.min.js'
 		}
 	},
 	sass: {
@@ -98,14 +98,14 @@ grunt.initConfig({
 		},
 		task2: {
 			options: {
-				banner: '/* \n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>  \n util.js\n*/\n',
+				banner: '/* \n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %>  \n lin.min.js\n*/\n',
 				compress: {
 					drop_console: true
 				}
 			},
-			src: 'dev/_assets/js/lib/util.js',
-			dest: 'dist/_assets/js/lib/util.js'
-		},
+			src: 'dev/_assets/js/lib/scripts.min.js',
+			dest: 'dist/_assets/js/lib/scripts.min.js'
+		}
 	},
 	// 公開用にdistフォルダにコピー
 	copy: {
@@ -118,7 +118,11 @@ grunt.initConfig({
 	},
 	// 公開フォルダから不要なデータを削除
 	clean: {
-		build: ['dist/_assets/_sass']
+		build: [
+			'dist/_assets/_sass',
+			'dist/_assets/js/lib/jquery-1.11.2.min.js',
+			'dist/_assets/js/lib/util.js'
+		]
 	},
 
 	// 監視
@@ -129,6 +133,10 @@ grunt.initConfig({
 		js: {
 			files: ['dev/_assets/js/src/*.js'],
 			tasks: ['jshint']
+		},
+		jsLib: {
+			files: ['dev/_assets/js/lib/*.js','!scripts.min.js'],
+			tasks: ['concat']
 		},
 		sass: {
 			files: ['dev/_assets/_sass/*.scss'],
